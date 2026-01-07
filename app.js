@@ -187,7 +187,7 @@ app.get('/products/:id',async(req,res)=>{
 // delete
 app.delete('/products',async(req,res)=>{
     try {
-        let products=await productsmodel.findByIdAndDelete('6957737a0419366dd05d9952')
+        let products=await productsmodel.findByIdAndDelete('695b658b6b56d483e0d9b331')
         res.status(200).json({msg:"product deleted succesfuly"})
     } catch (error) {
         res.json({
@@ -199,7 +199,8 @@ app.delete('/products',async(req,res)=>{
 // update
 app.put('/products',async(req,res)=>{
     try {
-        let products=await productsmodel.findByIdAndUpdate('69575fd6834e2161c8d4d3ed',{title:"new chair",price:70000})
+        let products=await productsmodel.findByIdAndUpdate('695b658b6b56d483e0d9b331',{ "title": "Opna Women's Short Sleeve Moisture",
+    "price": 7.95,image:"https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_t.png"})
         res.status(200).json({msg:"product Updated succesfuly"})
     } catch (error) {
         res.json({
